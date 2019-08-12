@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <title>Login</title>
+    <head th:replace="fragments/head :: head"></head>
+</head>
+<body>
+<br/>
+<br/>
+<div class="container justify-content-end">
+
+    <div class="card col-sm-4 " style="margin-left: 33%">
+        <article class="card-body ">
+            <h4 class="card-title text-center mb-4 mt-1">Авторизоваться</h4>
+            <hr>
+            <p th:if="${param.error}" class="text-warning text-center"> Неправильный email или пароль</p>
+            <form  th:action="@{'/login'}" method="post">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="email" class="form-control" placeholder="Email" type="email">
+                    </div> <!-- input-group.// -->
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                        </div>
+                        <input name="password" class="form-control" placeholder="******" type="password">
+                    </div> <!-- input-group.// -->
+                </div> <!-- form-group// -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Войти  </button>
+                </div> <!-- form-group// -->
+                <p class="text-center"><a class="underlineHover" th:href="@{/registration}" method="get">Зарегистрироваться</a></p>
+            </form>
+        </article>
+    </div>
+
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <blockquote class="blockquote text-center">
+        <p class="mb-0" th:text="#{postsByUser}"></p>
+    </blockquote>
+
+    <!--Posts-->
+    <div class="row">
+        <div>
+            <div class="card-deck">
+                <div class="col" th:each="post : ${listOfPostsByUser}">
+                    <div class="card" style="width: 14rem;">
+                        <div>
+                            <img class="card-img-top" alt="Card image"
+                                 th:src="@{'/post/' + ${post.id} + '/post-image'}"
+                                 onerror="this.onerror=null; this.src='/../../images/no-image.png'">
+                        </div>
+                        <div class="card-body">
+                            <h4  th:text="${post.price}"></h4>
+                            <br/>
+                            <h6 class="card-subtitle mb-2 text-muted" th:text="${post.district.getValue()}"></h6>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item text-center">
+                                <a  th:href="@{'/post/' + ${post.id}}"
+                                    class="btn btn-primary" th:text="#{detail}"></a>
+                            </li>
+                            <li class="list-group-item text-center">
+                                <form th:method="post" th:action="@{'/post-delete/' + ${post.id}}">
+                                    <input class="btn btn-danger" type="submit" th:value="#{delete}"/>
+                                </form>
+                            </li>
+                        </ul>
+                        <div class="card-footer text-center">
+                            <small class="text-muted" th:text="${post.dateTime}"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

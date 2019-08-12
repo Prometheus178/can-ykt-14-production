@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+
+<section class="probootstrap-section probootstrap-section-lighter">
+    <div class="site-section" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8 mb-5">
+                    <form th:object="${customerAttribute}" th:action="@{'/order/visit/' + ${apartmentId}}"  method="post"  class="p-5 bg-white border">
+                        <h3>Подать заявку</h3>
+                        <br/>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold">Ваше имя</label>
+                                <input type="text" name="username" id="name1" class="form-control" placeholder="Ваше имя">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="email">Номер телефона</label>
+                                <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="Номер телефона">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold">Комментарий</label>
+                                <textarea type="text" name="comment" id="comment" cols="30" rows="5" class="form-control"
+                                          placeholder="Ваш комментарий"></textarea>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="email">Ипотека</label>
+                                <input type="checkbox" name="mortgage" id="mortgage">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label class="font-weight-bold" for="email">Согласие на обработку данных</label>
+                                <input type="checkbox" name="agreeToDataProcessing" id="agreeToDataProcessing">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Отправить заявку" class="btn btn-primary  py-2 px-4 rounded-0">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    color: #0000FF;
+}
+
+h2 {
+    color: #FF0000;
+}
+
+footer {
+    margin-top: 60px;
+}
+
+.validation-message {
+    font-style: normal;
+    font-size: 10px;
+    color: #FF1C19;
+}
+
+a {
+    transition: all .2s;
+}
+
+a:hover, a:focus, a:active {
+    color: purple;
+    text-decoration: none;
+}
+
+.pagination {
+    display: block;
+    text-align: center;
+}
+
+.fa-1x {
+    font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+
+@media (min-width: 1500px) {
+    .navbar-nav.navbar-center {
+        left: 50%;
+        transform: translatex(-50%);
+    }
+}
+
+.img-fluid {
+    max-width: 50%;
+    height: auto;
+}
+.container {
+    margin-top: 8%;
+}
+.card-img{
+    margin-top: 6%;
+}
+.card-img-overlay{
+    padding-top: 17%;
+}
+
+.card-title{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+
+
+
+
+
