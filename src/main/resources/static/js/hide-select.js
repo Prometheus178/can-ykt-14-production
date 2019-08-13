@@ -16,8 +16,7 @@ function rentTypeSelectHandlerPost(select) {
 }
 
 function showLivingPost() {
-    var living = document.getElementById('livingPost');
-    living.style.display = 'inline-block';
+
     var numberOfRooms = document.getElementById('numberOfRoomsPost');
     numberOfRooms.style.display = 'inline-block';
     var buildingType = document.getElementById('buildingTypePost');
@@ -29,8 +28,7 @@ function showLivingPost() {
 }
 
 function hideLivingPost() {
-    var living = document.getElementById('livingPost');
-    living.style.display = 'none';
+
     var numberOfRooms = document.getElementById('numberOfRoomsPost');
     numberOfRooms.style.display = 'none';
     var buildingType = document.getElementById('buildingTypePost');
@@ -42,26 +40,10 @@ function hideLivingPost() {
 }
 
 function realEstateLivingTypeSelectHandlerPost(select) {
-    if (select.value == 'LIVING'){
+    if (select.value != 'COMMERCIAL'){
         showLivingPost();
     }else {
         hideLivingPost();
     }
 }
 
-function hideCommercialPost() {
-    var commercial = document.getElementById('commercialPost');
-    commercial.style.display = 'none';
-}
-
-function showCommercialPost() {
-    var commercial = document.getElementById('commercialPost');
-    commercial.style.display = 'inline-block';
-}
-function realEstateCommercialTypeSelectHandlerPost(select) {
-    if (select.value == 'COMMERCIAL'){
-        showCommercialPost();
-    }else {
-        hideCommercialPost();
-    }
-}

@@ -50,29 +50,12 @@
                     </option>
                 </select>
             </div>
-            <div class="form-group col" id="realEstateTypePost">
-                <label>Тип помещения</label>
-                <select th:field="*{realEstateType}" name="realEstateType" class="custom-select" onchange="{realEstateLivingTypeSelectHandlerPost(this),realEstateCommercialTypeSelectHandlerPost(this)}">
-                    <option th:each="realEstateType : ${T(com.realestate.site.models.post.enums.RealEstateType).values()}"
-                            th:value="${realEstateType}"
-                            th:text="${realEstateType.getValue()}">
-                    </option>
-                </select>
-            </div>
-            <div class="form-group col" id="commercialPost">
-                <label>Коммерческая</label>
-                <select th:field="*{commercial}" name="commercial"  class="custom-select">
-                    <option th:each="commercial : ${T(com.realestate.site.models.post.enums.Commercial).values()}"
-                            th:value="${commercial}"
-                            th:text="${commercial.getValue()}">
-                    </option>
-                </select>
-            </div>
+
         </div>
         <div class="row">
             <div class="form-group col" id="livingPost" >
                 <label>Жилая</label>
-                <select th:field="*{living}" name="living" class="custom-select">
+                <select th:field="*{living}" name="living" class="custom-select"  onchange="{realEstateLivingTypeSelectHandlerPost(this)}" >
                     <option th:each="living : ${T(com.realestate.site.models.post.enums.Living).values()}"
                             th:value="${living}"
                             th:text="${living.getValue()}">

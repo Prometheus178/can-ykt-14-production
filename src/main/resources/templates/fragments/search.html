@@ -18,13 +18,13 @@
                                     th:text="${dealType.getValue()}">
                             </option>
                         </select>
-                        <select name="commercial" class="custom-select " id="commercialSearch" onchange="commercialSelected(this)">
-                            <option th:value="null">Коммерческое предложение</option>
-                            <option th:each="commercial : ${T(com.realestate.site.models.post.enums.Commercial).values()}"
-                                    th:value="${commercial}"
-                                    th:text="${commercial.getValue()}">
-                            </option>
-                        </select>
+<!--                        <select name="commercial" class="custom-select " id="commercialSearch" onchange="commercialSelected(this)">-->
+<!--                            <option th:value="null">Коммерческое предложение</option>-->
+<!--                            <option th:each="commercial : ${T(com.realestate.site.models.post.enums.Commercial).values()}"-->
+<!--                                    th:value="${commercial}"-->
+<!--                                    th:text="${commercial.getValue()}">-->
+<!--                            </option>-->
+<!--                        </select>-->
                         <select name="living" class="custom-select " onchange="{apartmentSelectHandler(this), livingSelected(this)}" id="livingSearch">
                             <option th:value="null">Жилая недвижимость</option>
                             <option th:each="living : ${T(com.realestate.site.models.post.enums.Living).values()}"

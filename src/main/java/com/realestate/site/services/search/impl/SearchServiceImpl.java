@@ -16,8 +16,8 @@ public class SearchServiceImpl implements SearchService {
     private PostRepository postRepository;
 
     @Override
-    public List<Post> findAllByQuery(DealType dealType, Commercial commercial, Living living, NumberOfRooms numberOfRooms, AccountType accountType) {
-        return postRepository.findByDealTypeAndCommercialAndLivingAndNumberOfRoomsAndAccountType(dealType,commercial,living,numberOfRooms,accountType);
+    public List<Post> findAllByQuery(DealType dealType, Living living, NumberOfRooms numberOfRooms, AccountType accountType) {
+        return postRepository.findByDealTypeAndLivingAndNumberOfRoomsAndAccountType(dealType,living,numberOfRooms,accountType);
 
     }
 }

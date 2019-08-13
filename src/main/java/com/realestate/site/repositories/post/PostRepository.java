@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    List<Post> findByDealTypeAndCommercialAndLivingAndNumberOfRoomsAndAccountType(DealType dealType, Commercial commercial, Living living, NumberOfRooms numberOfRooms, AccountType accountType);
+    List<Post> findByDealTypeAndLivingAndNumberOfRoomsAndAccountType(DealType dealType, Living living, NumberOfRooms numberOfRooms, AccountType accountType);
     List<Post> findAllByUser(User user);
 
     Page<Post> findAllByDealType(Pageable pageable, DealType dealType);

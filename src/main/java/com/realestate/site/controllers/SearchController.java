@@ -24,7 +24,7 @@ public class SearchController {
     @PostMapping("/search")
     public String searchForm(Model model, @ModelAttribute("post") Post post) {
 
-        List<Post> posts = searchService.findAllByQuery(post.getDealType(),post.getCommercial(),post.getLiving(),post.getNumberOfRooms(),post.getAccountType());
+        List<Post> posts = searchService.findAllByQuery(post.getDealType(),post.getLiving(),post.getNumberOfRooms(),post.getAccountType());
         model.addAttribute("postsSearchedByQuery", posts);
 
         return "search-result";
