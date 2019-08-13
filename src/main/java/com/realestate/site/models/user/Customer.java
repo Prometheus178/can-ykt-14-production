@@ -9,8 +9,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-
-@Data
 @Entity
 @Table(name = "customers")
 public class Customer {

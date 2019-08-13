@@ -34,22 +34,5 @@ function livingSelected(select) {
     }
 }
 
-function hideLiving() {
-    var living = document.getElementById('livingSearch');
-    living.style.display = 'none';
-}
-
-function showLiving() {
-    var living = document.getElementById('livingSearch');
-    living.style.display = 'inline-block';
-}
-
-function commercialSelected(select) {
-    if (select.value == 'OFFICE' ||'BUILDING' ||'TRADING_Area' ||'FREE_APOINTMENT_ROOM'||'PRODUCTION'||'STOCK'||'READY_BUSINESS'||'COMMERCIAL_STEAD') {
-        hideLiving();
-    } else {
-        showLiving();
-    }
-}
 
 

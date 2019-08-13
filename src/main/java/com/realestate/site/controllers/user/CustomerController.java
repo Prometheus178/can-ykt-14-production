@@ -26,7 +26,7 @@ public class CustomerController {
     public String orderPage(@PathVariable("id")  Long id, Model model){
 
         Customer customer = new Customer();
-        model.addAttribute("apartmentId",id);
+        model.addAttribute("apartmentId", id);
         model.addAttribute("customerAttribute", customer);
         return "new_building_order";
     }

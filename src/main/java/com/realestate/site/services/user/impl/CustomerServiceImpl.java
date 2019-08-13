@@ -3,7 +3,7 @@ package com.realestate.site.services.user.impl;
 
 import com.realestate.site.models.user.Customer;
 import com.realestate.site.repositories.user.CustomerRepository;
-import com.realestate.site.services.user.Postman;
+import com.realestate.site.utils.Postman;
 import com.realestate.site.services.user.interfaces.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,8 +20,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void sendEmail(Customer customer) {
-        Postman postman = new Postman("canykt14@gmail.com", "Qazwsxxedc14");
-        postman.send("zayavka na osmotr", customer,"canykt14@gmail.com", "can-ykt@mail.ru");
+        Postman postman = new Postman("yktcan220@gmail.com", "yakutsktcan220!");
+        postman.send("zayavka na osmotr", customer,"yktcan220@gmail.com", "can-ykt@mail.ru");
     }
 
     @Override

@@ -29,7 +29,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> findAllByUser(User user) {
-        return postRepository.findAllByUser(user);
+        return postRepository.findAllByUserOrderByDateTimeDesc(user);
     }
 
     @Override
@@ -44,12 +44,12 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Page<Post> findAllOrderedByDatePageable(int page) {
-        return postRepository.findAll(new PageRequest(subtractPageByOne(page), 12));
+        return postRepository.findAllByOrderByDateTimeDesc(new PageRequest(subtractPageByOne(page), 12));
     }
 
     @Override
     public Page<Post> findAllByDealType(int page, DealType dealType) {
-        return postRepository.findAllByDealType(new PageRequest(subtractPageByOne(page), 12),dealType);
+        return postRepository.findAllByDealTypeOrderByDateTimeDesc(new PageRequest(subtractPageByOne(page), 12),dealType);
     }
 
     private int subtractPageByOne(int page){
