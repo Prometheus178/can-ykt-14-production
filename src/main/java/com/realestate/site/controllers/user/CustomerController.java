@@ -38,7 +38,7 @@ public class CustomerController {
         customerService.saveCustomer(customer);
         customerService.sendEmail(customer);
         model.addAttribute("successMessage", "Спасибо за обращение наши сотрудники с вами свяжутся в ближайщее время");
-        return "redirect:/main";
+        return "redirect:/";
     }
 
 

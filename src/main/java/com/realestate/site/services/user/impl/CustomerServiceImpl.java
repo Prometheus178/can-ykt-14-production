@@ -20,8 +20,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void sendEmail(Customer customer) {
-        Postman postman = new Postman("sergeipopof178@gmail.com", "Sirius178!");
-        postman.send("Заявка на осмотр", customer,"sergeipopof178@gmail.com", "siriusonestar@yandex.ru");
+        Postman postman = new Postman("canykt14@gmail.com", "Qazwsxxedc14");
+        postman.send("zayavka na osmotr", customer,"canykt14@gmail.com", "can-ykt@mail.ru");
     }
 
     @Override

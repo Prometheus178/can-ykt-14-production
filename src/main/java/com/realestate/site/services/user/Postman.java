@@ -46,7 +46,7 @@ public class Postman {
             message.setText(fullText.toString());
             Transport.send(message);
         } catch (MessagingException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException(e.getCause());
         }
     }
 

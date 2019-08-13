@@ -57,7 +57,8 @@ public class Post {
     private BuildingType buildingType;
     @Column(name = "description")
     private String description;
-
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
     @Column(name = "price")
     private int price;
@@ -293,6 +294,14 @@ public class Post {
 
     public void setDeposit(int deposit) {
         this.deposit = deposit;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public boolean isFurniture() {

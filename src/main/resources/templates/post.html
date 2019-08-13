@@ -44,20 +44,14 @@
                                 <h6 class="card-subtitle mb-2 text-muted">Тип аренды</h6>
                                 <p th:text="*{rentType.getValue()}"></p>
                             </div>
-<!--                            <div class="col">-->
-<!--                                <h6 class="card-subtitle mb-2 text-muted">Тип помещения</h6>-->
-<!--                                <p th:text="*{realEstateType.getValue()}"></p>-->
-<!--                            </div>-->
+
                         </div>
                         <div class="row">
                             <div class="col">
                                 <h6 class="card-subtitle mb-2 text-muted">Жилая</h6>
                                 <p th:text="*{living.getValue()}"></p>
                             </div>
-                            <div class="col">
-                                <h6 class="card-subtitle mb-2 text-muted">Коммерческая</h6>
-                                <p th:text="*{commercial.getValue()}"></p>
-                            </div>
+
                             <div class="col">
                                 <h6 class="card-subtitle mb-2 text-muted">Район</h6>
                                 <p th:text="*{district.getValue()}"/></p>
@@ -72,7 +66,7 @@
                                 <h6 class="card-subtitle mb-2 text-muted">Тип жилья</h6>
                                 <p th:text="*{buildingType.getValue()}"></p>
                             </div>
-                            <div class="col" id="">
+                            <div class="col">
                                 <h6 class="card-subtitle mb-2 text-muted">Количество комнат</h6>
                                 <p th:field="*{numberOfRooms.getValue()}"></p>
                             </div>
@@ -169,8 +163,8 @@
                     <p th:text="*{description}">
                 </div>
                 <div class="list-group-item">
-                    <h6 class="card-subtitle mb-2 text-muted">Пользователь</h6>
-                    <p th:text="*{user.id}"></p>
+                    <h6 class="card-subtitle mb-2 text-muted">Телефон</h6>
+                    <p th:text="*{phoneNumber}"></p>
                 </div>
                 <div class="card-footer text-muted" th:text="*{dateTime}">
                 </div>

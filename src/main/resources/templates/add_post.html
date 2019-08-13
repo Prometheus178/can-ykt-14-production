@@ -226,7 +226,13 @@
                 <label class="custom-file-label" for="inputGroupFile01">Выберите фото</label>
             </div>
         </div>
-
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="phoneNumber">Телефон</span>
+            </div>
+            <input th:field="*{phoneNumber}" type="text" class="form-control" placeholder="Введите номер телефона" aria-label="Телефон"
+                   aria-describedby="basic-addon1">
+        </div>
         <input type="hidden" th:field="*{user}"/>
         <input type="hidden" th:field="*{id}"/>
         <br/>
