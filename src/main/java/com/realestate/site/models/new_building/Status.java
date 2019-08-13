@@ -12,7 +12,7 @@ public enum Status {
         this.displayName = val;
     }
 
-    public String getDisplayName() {
+    public String getValue() {
         return displayName;
     }
 
