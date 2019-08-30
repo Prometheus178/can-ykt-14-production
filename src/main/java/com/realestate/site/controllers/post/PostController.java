@@ -98,11 +98,34 @@ public class PostController {
         }
     }
 
+    @GetMapping("/post/{id}/post-image/{image}")
+    public void showImageCarouselFromDB(@PathVariable("id") Long id, @PathVariable("image") Integer image, HttpServletResponse response) throws IOException {
+        List<Photo> photos = photoService.getPhotos(id);
+        if (photos != null) {
+            ServletOutputStream outputStream = response.getOutputStream();
+            Photo photo = photos.get(image);
+            try {
+                response.setContentType("image/jpeg");
+                byte[] picture = photo.getPhoto();
+                outputStream.write(picture);
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                outputStream.close();
+            }
+        }
+    }
+
     @PostMapping("/post-delete/{id}")
     public String postDelete(@PathVariable("id") Long id) {
-        Post post = postService.findById(id);
-        postService.deletePost(post);
+        postService.deletePost(postService.findById(id));
         return "redirect:/user/profile";
+    }
+
+    @PostMapping("/post-update/{id}")
+    public String postUpdate(Model model, @PathVariable("id") Long id) {
+        model.addAttribute("postAttribute",postService.findById(id));
+        return "add_post";
     }
 
 

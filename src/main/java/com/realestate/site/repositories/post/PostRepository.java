@@ -15,7 +15,7 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    List<Post> findByDealTypeAndLivingAndNumberOfRoomsAndAccountTypeOrderByDateTimeDesc(DealType dealType, Living living, NumberOfRooms numberOfRooms, AccountType accountType);
+    List<Post> findByDealTypeAndLivingAndNumberOfRoomsAndBuildingTypeAndAccountTypeAndPriceBetweenOrderByDateTimeDesc(DealType dealType, Living living, NumberOfRooms numberOfRooms, BuildingType buildingType, AccountType accountType, int from , int to);
     List<Post> findAllByUserOrderByDateTimeDesc(User user);
     Page<Post> findAllByOrderByDateTimeDesc(Pageable pageable);
     Page<Post> findAllByDealTypeOrderByDateTimeDesc(Pageable pageable, DealType dealType);

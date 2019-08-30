@@ -26,6 +26,7 @@ public class CustomerController {
     public String orderPage(@PathVariable("id")  Long id, Model model){
 
         Customer customer = new Customer();
+        customer.setDateTime(LocalDateTime.now().toString());
         model.addAttribute("apartmentId", id);
         model.addAttribute("customerAttribute", customer);
         return "new_building_order";
@@ -34,10 +35,10 @@ public class CustomerController {
     @PostMapping("/order/visit/{id}")
     public String toOrderAnApartment(@PathVariable("id")Long id, @ModelAttribute Customer customer, Model model) {
         customer.setApartment(apartmentService.findApartmentById(id));
-        customer.setDateTime(LocalDateTime.now().toString());
+
         customerService.saveCustomer(customer);
         customerService.sendEmail(customer);
-        model.addAttribute("successMessage", "Спасибо за обращение наши сотрудники с вами свяжутся в ближайщее время");
+//        model.addAttribute("successMessage", "Спасибо за обращение наши сотрудники с вами свяжутся в ближайщее время");
         return "redirect:/";
     }
 

@@ -113,7 +113,7 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "id=" + id +
+
                 ", username='" + username + '\'' +
                 ", dateTime='" + dateTime + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
@@ -121,7 +121,7 @@ public class Customer {
                 ", comment='" + comment + '\'' +
                 ", mortgage=" + mortgage +
                 ", agreeToDataProcessing=" + agreeToDataProcessing +
-                ", apartment=" + apartment.getAddress() +
+                ", apartment=" + apartment +
                 '}';
     }
 }

@@ -115,4 +115,17 @@ public class Apartment{
     public void setStatus(Status status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Apartment{" +
+                "address=" + address +
+                ", floor=" + floor +
+                ", numberOfApartment=" + numberOfApartment +
+                ", numberOfRooms=" + numberOfRooms +
+                ", square=" + square +
+                ", pricePerSquare=" + pricePerSquare +
+                ", fullPrice=" + fullPrice +
+                '}';
+    }
 }

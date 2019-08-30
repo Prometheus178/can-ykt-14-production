@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface SearchService {
 
-    List<Post> findAllByQuery(DealType dealType,Living living, NumberOfRooms numberOfRooms, AccountType accountType);
+    List<Post> findAllByQuery(DealType dealType,Living living, NumberOfRooms numberOfRooms,BuildingType buildingType, AccountType accountType, int from , int to);
 }

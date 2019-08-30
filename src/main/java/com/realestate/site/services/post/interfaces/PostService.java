@@ -15,6 +15,7 @@ public interface PostService {
     void deletePost(Post post);
     Post save(Post post);
 
+
     Page<Post> findAllOrderedByDatePageable(int page);
     Page<Post> findAllByDealType(int page, DealType dealType);
 

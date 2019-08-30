@@ -10,11 +10,12 @@
     <div class="card" th:object="${post}">
         <div class="carousel slide" data-ride="carousel" id="carouselExampleControls">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <div class="carousel-item" th:classappend="${status.first} ? 'active'" th:each="i, status: ${#numbers.sequence(0, 3)}">
                     <div>
-                        <img alt="Card image" class="card-img-top"
-                             onerror="this.onerror=null; this.src='/../../images/no-image.png'"
-                             th:src="@{'/post/' + ${post.id} + '/post-image'}">
+                        <img   class="card-img-top"
+                               alt="Card image"
+                               th:src="@{/post/{id}/post-image/{image}(id=${post.id},image=${i})}"
+                               onerror="this.onerror=null; this.src='/../../images/no-image.png'">
                     </div>
                 </div>
             </div>
