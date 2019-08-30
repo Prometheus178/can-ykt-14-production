@@ -10,7 +10,7 @@
     <div class="card" th:object="${post}">
         <div class="carousel slide" data-ride="carousel" id="carouselExampleControls">
             <div class="carousel-inner">
-                <div class="carousel-item" th:classappend="${status.first} ? 'active'" th:each="i, status: ${#numbers.sequence(0, 3)}">
+                <div class="carousel-item" th:classappend="${status.first} ? 'active'" th:each="i, status: ${#numbers.sequence(0, post.photos.size() - 1)}">
                     <div>
                         <img   class="card-img-top"
                                alt="Card image"
